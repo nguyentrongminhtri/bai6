@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text"  id="cạnh ngắn">
+<input type="text"  id="cạnh dài">
+<button onclick="doancode1()">Nhập</button>
+<h1 id="kq"></h1>
+<script>
+    function doancode1() {
+        let a = document.getElementById('cạnh ngắn').value;
+        let b = document.getElementById('cạnh dài').value;
+        document.getElementById("kq").innerHTML = "dien tich la: " + a * b;
+
+    }
+</script>
+<input type="text"  id="dữ liệu">
+<button onclick="doancode3()">Nhập</button>
+<h1 id="C"></h1>
+<script>
+    function doancode3() {
+        let F = document.getElementById('dữ liệu').value;
+              document.getElementById("C").innerHTML =  (F-32)/1.8 + "Độ C"
+    }
+</script>
+<input type="number"  id="toan">
+<input type="number"  id="ly">
+<input type="number"  id="hoa">
+<button onclick="doancode2()">Nhập</button>
+<h1 id="TB"></h1>
+<script>
+    function doancode2() {
+        let T = +document.getElementById('toan').value;
+        let L = +document.getElementById('ly').value;
+        let H = +document.getElementById('hoa').value;
+
+        console.log(T, L, H)
+        let tb = (T + L + H) /3;
+
+
+        document.getElementById("TB").innerHTML = "Điểm trung Bình là: " + tb;
+    }
+</script>
+</body>
+</html>
